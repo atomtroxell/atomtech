@@ -1,0 +1,10 @@
+# main links
+main:
+  - title: "Services"
+    url: /services
+  - title: "About"
+    url: /about
+  - title: "Schedule a Repair"
+    url: /contact
+  # - title: "Schedule a Repair"
+  #   url: /contact
