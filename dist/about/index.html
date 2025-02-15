@@ -584,6 +584,72 @@ html {
 
 :root {
   color-scheme: light;
+  --in: 72.06% 0.191 231.6;
+  --su: 64.8% 0.150 160;
+  --wa: 84.71% 0.199 83.87;
+  --er: 71.76% 0.221 22.18;
+  --pc: 89.824% 0.06192 275.75;
+  --ac: 15.352% 0.0368 183.61;
+  --inc: 0% 0 0;
+  --suc: 0% 0 0;
+  --wac: 0% 0 0;
+  --erc: 0% 0 0;
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+  --p: 49.12% 0.3096 275.75;
+  --s: 69.71% 0.329 342.55;
+  --sc: 98.71% 0.0106 342.55;
+  --a: 76.76% 0.184 183.61;
+  --n: 32.1785% 0.02476 255.701624;
+  --nc: 89.4994% 0.011585 252.096176;
+  --b1: 100% 0 0;
+  --b2: 96.1151% 0 0;
+  --b3: 92.4169% 0.00108 197.137559;
+  --bc: 27.8078% 0.029596 256.847952;
+}
+
+[data-theme=light] {
+  color-scheme: light;
+  --in: 72.06% 0.191 231.6;
+  --su: 64.8% 0.150 160;
+  --wa: 84.71% 0.199 83.87;
+  --er: 71.76% 0.221 22.18;
+  --pc: 89.824% 0.06192 275.75;
+  --ac: 15.352% 0.0368 183.61;
+  --inc: 0% 0 0;
+  --suc: 0% 0 0;
+  --wac: 0% 0 0;
+  --erc: 0% 0 0;
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: 0.25s;
+  --animation-input: .2s;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.5rem;
+  --p: 49.12% 0.3096 275.75;
+  --s: 69.71% 0.329 342.55;
+  --sc: 98.71% 0.0106 342.55;
+  --a: 76.76% 0.184 183.61;
+  --n: 32.1785% 0.02476 255.701624;
+  --nc: 89.4994% 0.011585 252.096176;
+  --b1: 100% 0 0;
+  --b2: 96.1151% 0 0;
+  --b3: 92.4169% 0.00108 197.137559;
+  --bc: 27.8078% 0.029596 256.847952;
+}
+
+[data-theme=retro] {
+  color-scheme: light;
   --inc: 90.923% 0.043042 262.880917;
   --suc: 12.541% 0.033982 149.213788;
   --wac: 13.3168% 0.031484 58.31834;
@@ -2563,6 +2629,18 @@ html {
 .mt-24 {
   margin-top: 6rem;
 }
+.-mt-20 {
+  margin-top: -5rem;
+}
+.-mt-16 {
+  margin-top: -4rem;
+}
+.-mt-14 {
+  margin-top: -3.5rem;
+}
+.-mt-12 {
+  margin-top: -3rem;
+}
 .block {
   display: block;
 }
@@ -2638,6 +2716,12 @@ html {
 }
 .w-full {
   width: 100%;
+}
+.w-1\/3 {
+  width: 33.333333%;
+}
+.w-1\/2 {
+  width: 50%;
 }
 .max-w-full {
   max-width: 100%;
@@ -3249,19 +3333,26 @@ html {
 </header>
       <main class="w-full max-w-full prose pt-14">
         
+<section class="w-100">
+  <h2 class="pb-2 mt-0 mb-8 text-5xl font-bold border-b-2 font-jakarta text-brand-primary border-brand-primary">About</h2>
+  <img class="float-left w-32 h-32 my-0 mb-8 mr-8 border rounded-lg shadow-xl border-base-300 drop-shadow-lg" alt="" src="/images/photo-welcome.jpg"/>
+  <p class="text-lg text-base-content">AtomTech is dedicated to providing expert technology solutions tailored to your needs. With a lifelong passion for innovation and problem-solving, I founded AtomTech to offer personalized tech services that make a difference in your daily life.</p>
+  <p class="text-lg text-base-content">From disassembling and successfully reassembling my dad's computer at a young age to mastering modern web development tools and frameworks, my journey into technology has been driven by curiosity and a commitment to excellence.</p>
+  <p class="text-lg text-base-content">At AtomTech, I specialize in a variety of services designed to optimize and enhance your digital experience. Whether it's troubleshooting game consoles, optimizing home networks, or providing expert iPhone repairs, I'm here to deliver reliable solutions that meet your tech needs.</p>
+  <p class="text-lg text-base-content">With a focus on quality and customer satisfaction, AtomTech aims to simplify your tech journey and ensure your devices operate at their best. Join me in exploring innovative solutions that elevate your digital world.</p>
+  <p class="text-3xl text-base-content font-annie">I look forward to working with you!</p>
+</section>
 
-        
-          <section class="relative mt-12 mb-20 hero bg-brand-primary">
-            <div class="p-12 text-center hero-content">
-              <div class="max-w-full">
-                <h2 class="mt-0 mb-4 text-5xl font-bold text-neutral-content font-jakarta">Schedule an Appointment!</h2>
-                <p class="pt-0 pb-6 m-0 text-lg text-neutral-content">Appointments are priced at only $35 for the first hour, whether I come to your home or you drop off your device. If your issue is resolved within this time frame, that's all you pay.</p>
-                <a href="#" class="text-xl no-underline border-0 btn btn-primary bg-base-content text-neutral-content hover:text-brand-primary hover:bg-neutral-content focus:bg-base-content focus:text-neutral-content">Schedule Now</a>
-                <p class="absolute m-0 text-xs text-base-200 bottom-2 right-2">*Terms and conditions apply.</p>
-              </div>
-            </div>
-          </section>
-        
+<section class="relative mt-12 mb-20 hero bg-brand-primary">
+  <div class="p-12 text-center hero-content">
+    <div class="max-w-full">
+      <h2 class="mt-0 mb-4 text-5xl font-bold text-neutral-content font-jakarta">Schedule an Appointment!</h2>
+      <p class="pt-0 pb-6 m-0 text-lg text-neutral-content">Appointments are priced at only $35 for the first hour, whether I come to your home or you drop off your device. If your issue is resolved within this time frame, that's all you pay.</p>
+      <a href="#" class="text-xl no-underline border-0 btn btn-primary bg-base-content text-neutral-content hover:text-brand-primary hover:bg-neutral-content focus:bg-base-content focus:text-neutral-content">Schedule Now</a>
+      <p class="absolute m-0 text-xs text-base-200 bottom-2 right-2">*Terms and conditions apply.</p>
+    </div>
+  </div>
+</section>
       </main>
       <footer class="border-t border-base-200">
   <div class="flex flex-wrap">
