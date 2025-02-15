@@ -1,12 +1,17 @@
 {
-  "name": "atomtech",
-  "version": "1.0.0",
-  "description": "<img src=\"https://img.shields.io/liberapay/receives/verfasor.svg?logo=liberapay\">",
-  "main": "compressed.js",
+  "name": "11ty-starter",
+  "version": "0.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "eleventy --serve",
+    "build": "eleventy"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.2",
+    "daisyui": "^4.12.23",
+    "postcss": "^8.4.7",
+    "tailwindcss": "^3.0.23",
+    "vite": "^2.8.6"
+  }
 }
