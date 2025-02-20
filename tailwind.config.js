@@ -11,6 +11,7 @@ module.exports = {
     },
     colors: {
       'brand-primary': '#dd4343',
+      'brand-white': '#ffffff',
     },
   },
   daisyui: {

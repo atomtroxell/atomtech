@@ -1,43 +1,74 @@
 ---
-title: Contact | AtomTech
-description: Services so and so
-keywords: services, games, etc
+title: Contact AtomTech |  For Tech Repair Services, Get Started Today!
+description: Contact AtomTech to schedule your tech repair appointment today. Whether you need computer tune-ups, smartphone repairs, or home security solutions, our expert team is ready to assist. Fill out our contact form to get started!
+keywords: tech repair services, schedule tech appointment, computer tune-ups, smartphone repairs, home security solutions
 layout: layouts/default.njk
 ---
 
 <section class="w-100">
-  <h2 class="pb-2 mt-0 mb-8 text-5xl font-bold border-b-2 font-jakarta text-brand-primary border-brand-primary">Contact</h2>
-  <form action="https://your-shared-hosting-domain.com/contact.php" method="post" class="">
+  <h1 class="pb-2 mt-0 mb-8 text-5xl font-bold border-b-2 sr-only font-jakarta text-brand-primary border-brand-primary">Contact Me</h1>
+  <p class="mt-0 text-lg font-light text-base-content">Whether you're looking to optimize your computer's performance, fix a glitchy smartphone, or enhance your home security, AtomTech is here to help. Fill out the form below to inquire about our services or schedule an appointment for tech repair. We'll get back to you promptly to discuss your needs and provide expert solutions tailored to you.</p>
+  <form action="https://helloatomtech.atomtroxell.com/ftools/process.php" autocomplete="off" method="post" id="contactForm">
+    {# <input type="hidden" name="form_tools_initialize_form" value="1" /> #}
+    <input type="hidden" name="form_tools_form_id" value="2"/>
     <div class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
       <div class="sm:col-span-4 form-control">
-        <label class="text-base font-medium text-base-content" for="name">Your Name<span class="text-brand-primary">*</span></label>
-        <input type="text" id="name" name="name" placeholder="" class="block w-full px-4 py-3 mt-2 border rounded-lg shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary placeholder:text-base-content focus:ring-brand-primary text-neutral-content bg-neutral-content" required>
+        <label class="text-base font-medium text-base-content" for="name">Name<span class="text-brand-primary">*</span></label>
+        <input type="text" id="name" name="name" placeholder="" class="block w-full px-4 py-3 mt-2 border rounded-lg shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary placeholder:text-base-content focus:ring-brand-primary text-base-content bg-neutral-content" required>
+        <span id="name" class="hidden p-2 font-semibold error text-neutral-content bg-brand-primary"></span>
       </div>
 
       <div class="sm:col-span-3 form-control">
-        <label class="text-sm font-medium text-base-content" for="email">Email<span class="text-brand-primary">*</span></label>
-        <input type="email" id="email" name="email" placeholder="" class="block w-full px-4 py-3 mt-2 border rounded-lg shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary placeholder:text-base-content focus:ring-brand-primary text-neutral-content bg-neutral-content" required>
+        <label class="text-base font-medium text-base-content" for="email">Email<span class="text-brand-primary">*</span></label>
+        <input type="email" id="email" name="email" placeholder="" class="block w-full px-4 py-3 mt-2 border rounded-lg shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary placeholder:text-base-content focus:ring-brand-primary text-base-content bg-neutral-content" required>
+        <span id="email" class="hidden p-2 font-semibold error text-neutral-content bg-brand-primary"></span>
       </div>
 
       <div class="sm:col-span-3 form-control">
-        <label class="text-base font-medium text-base-content" for="phone">Phone Number<span class="text-brand-primary">*</span></label>
-        <input type="tel" id="phone" name="phone" placeholder="" class="block w-full px-4 py-3 mt-2 border rounded-lg shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary placeholder:text-base-content focus:ring-brand-primary text-neutral-content bg-neutral-content" required>
+        <label class="text-base font-medium text-base-content" for="phone">Phone<span class="text-brand-primary">*</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="" class="block w-full px-4 py-3 mt-2 border rounded-lg shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary placeholder:text-base-content focus:ring-brand-primary text-base-content bg-neutral-content" onkeyup="this.value = this.value.replace(/[^0-9-]/g, '');" maxlength="10" required>
+        <span id="phone" class="hidden p-2 font-semibold error text-neutral-content bg-brand-primary"></span>
       </div>
 
-      <div class="sm:col-span-3 form-control">
-        <label class="text-base font-medium text-base-content" for="contactMethod">Preferred Contact Method<span class="text-brand-primary">*</span></label>
-        <select id="contactMethod" name="contactMethod" class="block w-full px-4 py-3 mt-2 border rounded-lg shadow-lg placeholder:text-base-content hover:border-brand-primary focus:border-brand-primary text-base-content bg-neutral-content border-base-content" required>
-          <option value="">Select a method...</option>
-          <option value="Email">Email</option>
-          <option value="Phone">Phone</option>
-        </select>
-      </div>
+      <fieldset id="services" class="sm:col-span-6">
+        <legend class="mb-2 text-base font-medium text-base-content">How can I contact you?<span class="text-brand-primary">*</span></legend>
+
+        <div class="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-6">
+          <div class="inline-flex items-center sm:col-span-3 md:col-span-1">
+            <label class="relative flex items-center cursor-pointer" for="methodEmail">
+              <input type="checkbox" id="methodEmail" name="contact[]" value="Computer Tune-Ups & Enhancements" class="w-5 h-5 transition-all border rounded shadow-md appearance-none cursor-pointer drop-shadow-md bg-neutral-content peer hover:shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary checked:bg-base-content checked:border-brand-primary"/>
+              <span class="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none text-neutral-content peer-checked:opacity-100 top-1/2 left-1/2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </span>
+              <span class="sr-only">Email</span>
+            </label>
+            <div class="ml-2 text-base leading-5 cursor-pointer text-base-content">Email</div>
+          </div>
+
+          <div class="inline-flex items-center sm:col-span-3 md:col-span-1">
+            <label class="relative flex items-center cursor-pointer" for="methodPhone">
+              <input type="checkbox" id="methodPhone" name="contact[]" value="Malware & Virus Remediation" class="w-5 h-5 transition-all border rounded shadow-md appearance-none cursor-pointer drop-shadow-md bg-neutral-content peer hover:shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary checked:bg-base-content checked:border-brand-primary"/>
+              <span class="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none text-neutral-content peer-checked:opacity-100 top-1/2 left-1/2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </span>
+              <span class="sr-only">Phone</span>
+            </label>
+            <div class="ml-2 text-base leading-5 cursor-pointer text-base-content">Phone</div>
+          </div>
+        </div>
+
+        <span id="contact-error" class="hidden p-2 font-semibold error text-neutral-content bg-brand-primary"></span>
+      </fieldset>
 
       <fieldset id="services" class="sm:col-span-6">
         <legend class="mb-2 text-base font-medium text-base-content">How can I help?<span class="text-brand-primary">*</span></legend>
 
         <div class="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-6">
-          <div class="inline-flex items-center sm:col-span-3">
+          <div class="inline-flex items-center sm:col-span-3 md:mb-2">
             <label class="relative flex items-center cursor-pointer" for="service1">
               <input type="checkbox" id="service1" name="services[]" value="Computer Tune-Ups & Enhancements" class="w-5 h-5 transition-all border rounded shadow-md appearance-none cursor-pointer drop-shadow-md bg-neutral-content peer hover:shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary checked:bg-base-content checked:border-brand-primary"/>
               <span class="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none text-neutral-content peer-checked:opacity-100 top-1/2 left-1/2">
@@ -45,11 +76,12 @@ layout: layouts/default.njk
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
               </span>
+              <span class="sr-only">Computer Tune-Ups &amp; Enhancements</span>
             </label>
-            <label class="ml-2 cursor-pointer" for="service1">Computer Tune-Ups &amp; Enhancements</label>
+            <div class="ml-2 text-base leading-5 cursor-pointer text-base-content">Computer Tune-Ups &amp; Enhancements</div>
           </div>
 
-          <div class="inline-flex items-center sm:col-span-3">
+          <div class="inline-flex items-center sm:col-span-3 md:mb-2">
             <label class="relative flex items-center cursor-pointer" for="service2">
               <input type="checkbox" id="service2" name="services[]" value="Malware & Virus Remediation" class="w-5 h-5 transition-all border rounded shadow-md appearance-none cursor-pointer drop-shadow-md bg-neutral-content peer hover:shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary checked:bg-base-content checked:border-brand-primary"/>
               <span class="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none text-neutral-content peer-checked:opacity-100 top-1/2 left-1/2">
@@ -57,11 +89,12 @@ layout: layouts/default.njk
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
               </span>
+              <span class="sr-only">Malware &amp; Virus Remediation</span>
             </label>
-            <label class="ml-2 cursor-pointer" for="service2">Malware &amp; Virus Remediation</label>
+            <div class="ml-2 text-base leading-5 cursor-pointer text-base-content">Malware &amp; Virus Remediation</div>
           </div>
 
-          <div class="inline-flex items-center sm:col-span-3">
+          <div class="inline-flex items-center sm:col-span-3 md:mb-2">
             <label class="relative flex items-center cursor-pointer" for="service3">
               <input type="checkbox" id="service3" name="services[]" value="Home Automation & Security Solutions" class="w-5 h-5 transition-all border rounded shadow-md appearance-none cursor-pointer drop-shadow-md bg-neutral-content peer hover:shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary checked:bg-base-content checked:border-brand-primary"/>
               <span class="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none text-neutral-content peer-checked:opacity-100 top-1/2 left-1/2">
@@ -69,11 +102,12 @@ layout: layouts/default.njk
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
               </span>
+              <span class="sr-only">Home Automation &amp; Security Solutions</span>
             </label>
-            <label class="ml-2 cursor-pointer" for="service3">Home Automation &amp; Security Solutions</label>
+            <div class="ml-2 text-base leading-5 cursor-pointer text-base-content">Home Automation &amp; Security Solutions</div>
           </div>
 
-          <div class="inline-flex items-center sm:col-span-3">
+          <div class="inline-flex items-center sm:col-span-3 md:mb-2">
             <label class="relative flex items-center cursor-pointer" for="service4">
               <input type="checkbox" id="service4" name="services[]" value="Mobile Phone Updates & Repairs" class="w-5 h-5 transition-all border rounded shadow-md appearance-none cursor-pointer drop-shadow-md bg-neutral-content peer hover:shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary checked:bg-base-content checked:border-brand-primary"/>
               <span class="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none text-neutral-content peer-checked:opacity-100 top-1/2 left-1/2">
@@ -81,11 +115,12 @@ layout: layouts/default.njk
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
               </span>
+              <span class="sr-only">Mobile Phone Updates &amp; Repairs</span>
             </label>
-            <label class="ml-2 cursor-pointer" for="service4">Mobile Phone Updates &amp; Repairs</label>
+            <div class="ml-2 text-base leading-5 cursor-pointer text-base-content">Mobile Phone Updates &amp; Repairs</div>
           </div>
 
-          <div class="inline-flex items-center sm:col-span-3">
+          <div class="inline-flex items-center sm:col-span-3 md:mb-2">
             <label class="relative flex items-center cursor-pointer" for="service5">
               <input type="checkbox" id="service5" name="services[]" value="Game Console Setup & Troubleshooting" class="w-5 h-5 transition-all border rounded shadow-md appearance-none cursor-pointer drop-shadow-md bg-neutral-content peer hover:shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary checked:bg-base-content checked:border-brand-primary"/>
               <span class="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none text-neutral-content peer-checked:opacity-100 top-1/2 left-1/2">
@@ -93,11 +128,12 @@ layout: layouts/default.njk
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
               </span>
+              <span class="sr-only">Game Console Setup &amp; Troubleshooting</span>
             </label>
-            <label class="ml-2 cursor-pointer" for="service5">Game Console Setup &amp; Troubleshooting</label>
+            <div class="ml-2 text-base leading-5 cursor-pointer text-base-content">Game Console Setup &amp; Troubleshooting</div>
           </div>
 
-          <div class="inline-flex items-center sm:col-span-3">
+          <div class="inline-flex items-center sm:col-span-3 md:mb-2">
             <label class="relative flex items-center cursor-pointer" for="service6">
               <input type="checkbox" id="service6" name="services[]" value="Networking Solutions & Optimization" class="w-5 h-5 transition-all border rounded shadow-md appearance-none cursor-pointer drop-shadow-md bg-neutral-content peer hover:shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary checked:bg-base-content checked:border-brand-primary"/>
               <span class="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-0 pointer-events-none text-neutral-content peer-checked:opacity-100 top-1/2 left-1/2">
@@ -105,8 +141,9 @@ layout: layouts/default.njk
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
               </span>
+              <span class="sr-only">Networking Solutions &amp; Optimization</span>
             </label>
-            <label class="ml-2 cursor-pointer" for="service6">Networking Solutions &amp; Optimization</label>
+            <div class="ml-2 text-base leading-5 cursor-pointer text-base-content">Networking Solutions &amp; Optimization</div>
           </div>
 
           <div class="inline-flex items-center sm:col-span-3">
@@ -117,8 +154,9 @@ layout: layouts/default.njk
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
               </span>
+              <span class="sr-only">Web Design &amp; Development</span>
             </label>
-            <label class="ml-2 cursor-pointer" for="service7">Web Design &amp; Development</label>
+            <div class="ml-2 text-base leading-5 cursor-pointer text-base-content">Web Design &amp; Development</div>
           </div>
 
           <div class="inline-flex items-center sm:col-span-3">
@@ -129,42 +167,126 @@ layout: layouts/default.njk
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                 </svg>
               </span>
+              <span class="sr-only">Other</span>
             </label>
-            <label class="ml-2 cursor-pointer" for="service8">Other</label>
-          </div>
-
-        </div>
-      </fieldset>
-
-      <fieldset id="existing" class="sm:col-span-6">
-        <legend class="mb-2 text-base font-medium text-base-content">Are you an existing client?<span class="text-brand-primary">*</span></legend>
-
-        <div class="flex gap-10">
-          <div class="inline-flex items-center">
-            <label class="relative flex items-center cursor-pointer" for="html">
-              <input name="clientStatus" type="radio" value="existing" class="w-5 h-5 transition-all border rounded-full appearance-none cursor-pointer peer border-base-content checked:border-brand-primary bg-neutral-content">
-              <span class="absolute w-3 h-3 transition-opacity duration-200 transform -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0 bg-base-content peer-checked:opacity-100 top-1/2 left-1/2"></span>
-            </label>
-            <label class="ml-2 cursor-pointer" for="html">Yes</label>
-          </div>
-
-          <div class="inline-flex items-center">
-            <label class="relative flex items-center cursor-pointer" for="react">
-              <input name="clientStatus" type="radio" value="new" class="w-5 h-5 transition-all border rounded-full appearance-none cursor-pointer peer border-base-content checked:border-brand-primary bg-neutral-content" checked="">
-              <span class="absolute w-3 h-3 transition-opacity duration-200 transform -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0 bg-base-content peer-checked:opacity-100 top-1/2 left-1/2"></span>
-            </label>
-            <label class="ml-2 text-sm cursor-pointer text-slate-600" for="react">No</label>
+            <div class="ml-2 text-base leading-5 cursor-pointer text-base-content">Other</div>
           </div>
         </div>
+
+        <span id="checkboxes-error" class="hidden p-2 font-semibold error text-neutral-content bg-brand-primary"></span>
       </fieldset>
 
-      <div class="sm:col-span-6 form-control">
-        <label class="text-base font-medium text-base-content" for="message">Please provide some details.</label>
-        <textarea id="message" class="block w-full px-4 py-3 mt-2 border rounded-lg shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary placeholder:text-base-content focus:ring-brand-primary text-neutral-content bg-neutral-content" name="message" placeholder="Your message" required></textarea>
+      <div class="sm:col-span-3 form-control">
+        <label class="text-base font-medium text-base-content" for="existingClient">Are you an existing client?<span class="text-brand-primary">*</span></label>
+        <select id="existingClient" name="existingClient" class="block w-full px-4 py-3 mt-2 border rounded-lg shadow-lg placeholder:text-base-content hover:border-brand-primary focus:border-brand-primary text-base-content bg-neutral-content border-base-content" required>
+          <option value="">Select one...</option>
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+        <span id="email" class="existingClient-error"></span>
       </div>
 
-      <input class="text-lg font-medium btn bg-base-content text-neutral-content" type="submit" value="Submit">
+      <div class="sm:col-span-6 form-control">
+        <label class="text-base font-medium text-base-content" for="message">Can you provide some details, please?<span class="text-brand-primary">*</span></label>
+        <textarea id="message" rows="5" class="block w-full px-4 py-3 mt-2 border rounded-lg shadow-lg border-base-content hover:border-brand-primary focus:border-brand-primary placeholder:text-base-content focus:ring-brand-primary text-base-content bg-neutral-content" name="message" placeholder="" required></textarea>
+      </div>
+
+      <div class="sm:col-span-6">
+        <input class="text-lg font-medium btn bg-base-content text-neutral-content" type="submit" value="Submit">
+      </div>
     </div>
   </form>
-
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contactForm");
+
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Validate form fields
+      if (!validateForm()) {
+        return;
+      }
+
+      function validateForm() {
+        let isValid = true;
+
+        // Example validation - add more as needed
+        const name = document
+          .getElementById("name")
+          .value
+          .trim();
+        const email = document
+          .getElementById("email")
+          .value
+          .trim();
+        const phone = document
+          .getElementById("phone")
+          .value
+          .trim();
+        const contactMethod = document
+          .getElementById("contactMethod")
+          .value
+          .trim();
+        // const existingClient = document.querySelector('input[name="existingClient"]:checked');
+        const existingClient = document
+          .getElementById("existingClient")
+          .value
+          .trim();
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+
+        if (name === "") {
+          isValid = false;
+          displayErrorMessage("name", "Please enter your name");
+        }
+
+        if (email === "" || !isValidEmail(email)) {
+          isValid = false;
+          displayErrorMessage("email", "Please enter a valid email address");
+        }
+
+        if (phone === "") {
+          isValid = false;
+          displayErrorMessage("phone", "Please enter your phone number");
+        }
+
+        if (contactMethod === "") {
+          isValid = false;
+          displayErrorMessage("contactMethod", "Please select a contact method");
+        }
+
+        if (existingClient === "") {
+          isValid = false;
+          displayErrorMessage("existingClient", "Please indicate if you're an existing client");
+        }
+
+        if (checkboxes.length === 0) {
+          isValid = false;
+          displayErrorMessage("checkboxes-error", "Please select at least one option");
+        }
+
+        return isValid;
+      }
+
+      function isValidEmail(email) {
+        // Simple email validation regex, customize as needed
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      function displayErrorMessage(fieldId, message) {
+        const errorElement = document.getElementById(`${fieldId}-error`);
+        if (errorElement) {
+          errorElement.textContent = message;
+          errorElement
+            .classList
+            .add("block");
+        }
+      }
+    });
+  });
+</script>
+
+<div id="errors"></div>
