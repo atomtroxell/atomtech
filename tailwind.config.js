@@ -10,7 +10,8 @@ module.exports = {
       'jakarta': '"Plus Jakarta Sans", Helvetica, Arial, sans-serif',
     },
     colors: {
-      'brand-primary': '#dd4343',
+      // 'brand-primary': '#dd4343', print color
+      'brand-primary': '#B73D3D',
       'brand-white': '#ffffff',
     },
   },
