@@ -2547,6 +2547,12 @@ html {
 .top-1\/2 {
   top: 50%;
 }
+.-bottom-2 {
+  bottom: -0.5rem;
+}
+.-bottom-4 {
+  bottom: -1rem;
+}
 .z-\[1\] {
   z-index: 1;
 }
@@ -2783,7 +2789,7 @@ html {
 }
 .border-brand-primary {
   --tw-border-opacity: 1;
-  border-color: rgb(221 67 67 / var(--tw-border-opacity, 1));
+  border-color: rgb(183 61 61 / var(--tw-border-opacity, 1));
 }
 .bg-base-100 {
   --tw-bg-opacity: 1;
@@ -2795,17 +2801,17 @@ html {
 }
 .bg-brand-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(221 67 67 / var(--tw-bg-opacity, 1));
+  background-color: rgb(183 61 61 / var(--tw-bg-opacity, 1));
 }
 .bg-neutral-content {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-nc,oklch(var(--nc)/var(--tw-bg-opacity, 1)));
 }
 .fill-brand-primary {
-  fill: #dd4343;
+  fill: #B73D3D;
 }
 .stroke-brand-primary {
-  stroke: #dd4343;
+  stroke: #B73D3D;
 }
 .p-0 {
   padding: 0px;
@@ -2904,10 +2910,6 @@ html {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -2953,15 +2955,15 @@ html {
 }
 .text-brand-primary {
   --tw-text-opacity: 1;
-  color: rgb(221 67 67 / var(--tw-text-opacity, 1));
+  color: rgb(183 61 61 / var(--tw-text-opacity, 1));
 }
 .text-neutral-content {
   --tw-text-opacity: 1;
   color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity, 1)));
 }
-.text-brand-white {
+.text-primary-content {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity, 1)));
 }
 .underline {
   text-decoration-line: underline;
@@ -2974,6 +2976,9 @@ html {
 }
 .opacity-50 {
   opacity: 0.5;
+}
+.opacity-70 {
+  opacity: 0.7;
 }
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -3051,7 +3056,7 @@ html {
 }
 .checked\:border-brand-primary:checked {
   --tw-border-opacity: 1;
-  border-color: rgb(221 67 67 / var(--tw-border-opacity, 1));
+  border-color: rgb(183 61 61 / var(--tw-border-opacity, 1));
 }
 .checked\:bg-base-content:checked {
   --tw-bg-opacity: 1;
@@ -3059,14 +3064,14 @@ html {
 }
 .hover\:border-brand-primary:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(221 67 67 / var(--tw-border-opacity, 1));
+  border-color: rgb(183 61 61 / var(--tw-border-opacity, 1));
 }
 .hover\:bg-base-content\/\[\.06\]:hover {
   background-color: var(--fallback-bc,oklch(var(--bc)/.06));
 }
 .hover\:bg-brand-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(221 67 67 / var(--tw-bg-opacity, 1));
+  background-color: rgb(183 61 61 / var(--tw-bg-opacity, 1));
 }
 .hover\:bg-neutral-content:hover {
   --tw-bg-opacity: 1;
@@ -3074,11 +3079,15 @@ html {
 }
 .hover\:text-brand-primary:hover {
   --tw-text-opacity: 1;
-  color: rgb(221 67 67 / var(--tw-text-opacity, 1));
+  color: rgb(183 61 61 / var(--tw-text-opacity, 1));
 }
 .hover\:text-neutral-content:hover {
   --tw-text-opacity: 1;
   color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity, 1)));
+}
+.hover\:text-primary-content:hover {
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity, 1)));
 }
 .hover\:no-underline:hover {
   text-decoration-line: none;
@@ -3090,7 +3099,7 @@ html {
 }
 .focus\:border-brand-primary:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(221 67 67 / var(--tw-border-opacity, 1));
+  border-color: rgb(183 61 61 / var(--tw-border-opacity, 1));
 }
 .focus\:bg-base-content:focus {
   --tw-bg-opacity: 1;
@@ -3101,18 +3110,22 @@ html {
 }
 .focus\:bg-brand-primary:focus {
   --tw-bg-opacity: 1;
-  background-color: rgb(221 67 67 / var(--tw-bg-opacity, 1));
+  background-color: rgb(183 61 61 / var(--tw-bg-opacity, 1));
 }
 .focus\:text-neutral-content:focus {
   --tw-text-opacity: 1;
   color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity, 1)));
+}
+.focus\:text-primary-content:focus {
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity, 1)));
 }
 .focus\:no-underline:focus {
   text-decoration-line: none;
 }
 .focus\:ring-brand-primary:focus {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(221 67 67 / var(--tw-ring-opacity, 1));
+  --tw-ring-color: rgb(183 61 61 / var(--tw-ring-opacity, 1));
 }
 .group:hover .group-hover\:scale-110 {
   --tw-scale-x: 1.1;
@@ -3123,11 +3136,11 @@ html {
   stroke: var(--fallback-bc,oklch(var(--bc)/1));
 }
 .group:hover .group-hover\:stroke-brand-primary {
-  stroke: #dd4343;
+  stroke: #B73D3D;
 }
 .group:hover .group-hover\:text-brand-primary {
   --tw-text-opacity: 1;
-  color: rgb(221 67 67 / var(--tw-text-opacity, 1));
+  color: rgb(183 61 61 / var(--tw-text-opacity, 1));
 }
 .group:focus .group-focus\:scale-110 {
   --tw-scale-x: 1.1;

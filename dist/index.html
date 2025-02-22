@@ -2547,6 +2547,12 @@ html {
 .top-1\/2 {
   top: 50%;
 }
+.-bottom-2 {
+  bottom: -0.5rem;
+}
+.-bottom-4 {
+  bottom: -1rem;
+}
 .z-\[1\] {
   z-index: 1;
 }
@@ -2783,7 +2789,7 @@ html {
 }
 .border-brand-primary {
   --tw-border-opacity: 1;
-  border-color: rgb(221 67 67 / var(--tw-border-opacity, 1));
+  border-color: rgb(183 61 61 / var(--tw-border-opacity, 1));
 }
 .bg-base-100 {
   --tw-bg-opacity: 1;
@@ -2795,17 +2801,17 @@ html {
 }
 .bg-brand-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(221 67 67 / var(--tw-bg-opacity, 1));
+  background-color: rgb(183 61 61 / var(--tw-bg-opacity, 1));
 }
 .bg-neutral-content {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-nc,oklch(var(--nc)/var(--tw-bg-opacity, 1)));
 }
 .fill-brand-primary {
-  fill: #dd4343;
+  fill: #B73D3D;
 }
 .stroke-brand-primary {
-  stroke: #dd4343;
+  stroke: #B73D3D;
 }
 .p-0 {
   padding: 0px;
@@ -2904,10 +2910,6 @@ html {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -2953,15 +2955,15 @@ html {
 }
 .text-brand-primary {
   --tw-text-opacity: 1;
-  color: rgb(221 67 67 / var(--tw-text-opacity, 1));
+  color: rgb(183 61 61 / var(--tw-text-opacity, 1));
 }
 .text-neutral-content {
   --tw-text-opacity: 1;
   color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity, 1)));
 }
-.text-brand-white {
+.text-primary-content {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity, 1)));
 }
 .underline {
   text-decoration-line: underline;
@@ -2974,6 +2976,9 @@ html {
 }
 .opacity-50 {
   opacity: 0.5;
+}
+.opacity-70 {
+  opacity: 0.7;
 }
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -3051,7 +3056,7 @@ html {
 }
 .checked\:border-brand-primary:checked {
   --tw-border-opacity: 1;
-  border-color: rgb(221 67 67 / var(--tw-border-opacity, 1));
+  border-color: rgb(183 61 61 / var(--tw-border-opacity, 1));
 }
 .checked\:bg-base-content:checked {
   --tw-bg-opacity: 1;
@@ -3059,14 +3064,14 @@ html {
 }
 .hover\:border-brand-primary:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(221 67 67 / var(--tw-border-opacity, 1));
+  border-color: rgb(183 61 61 / var(--tw-border-opacity, 1));
 }
 .hover\:bg-base-content\/\[\.06\]:hover {
   background-color: var(--fallback-bc,oklch(var(--bc)/.06));
 }
 .hover\:bg-brand-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(221 67 67 / var(--tw-bg-opacity, 1));
+  background-color: rgb(183 61 61 / var(--tw-bg-opacity, 1));
 }
 .hover\:bg-neutral-content:hover {
   --tw-bg-opacity: 1;
@@ -3074,11 +3079,15 @@ html {
 }
 .hover\:text-brand-primary:hover {
   --tw-text-opacity: 1;
-  color: rgb(221 67 67 / var(--tw-text-opacity, 1));
+  color: rgb(183 61 61 / var(--tw-text-opacity, 1));
 }
 .hover\:text-neutral-content:hover {
   --tw-text-opacity: 1;
   color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity, 1)));
+}
+.hover\:text-primary-content:hover {
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity, 1)));
 }
 .hover\:no-underline:hover {
   text-decoration-line: none;
@@ -3090,7 +3099,7 @@ html {
 }
 .focus\:border-brand-primary:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(221 67 67 / var(--tw-border-opacity, 1));
+  border-color: rgb(183 61 61 / var(--tw-border-opacity, 1));
 }
 .focus\:bg-base-content:focus {
   --tw-bg-opacity: 1;
@@ -3101,18 +3110,22 @@ html {
 }
 .focus\:bg-brand-primary:focus {
   --tw-bg-opacity: 1;
-  background-color: rgb(221 67 67 / var(--tw-bg-opacity, 1));
+  background-color: rgb(183 61 61 / var(--tw-bg-opacity, 1));
 }
 .focus\:text-neutral-content:focus {
   --tw-text-opacity: 1;
   color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity, 1)));
+}
+.focus\:text-primary-content:focus {
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity, 1)));
 }
 .focus\:no-underline:focus {
   text-decoration-line: none;
 }
 .focus\:ring-brand-primary:focus {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(221 67 67 / var(--tw-ring-opacity, 1));
+  --tw-ring-color: rgb(183 61 61 / var(--tw-ring-opacity, 1));
 }
 .group:hover .group-hover\:scale-110 {
   --tw-scale-x: 1.1;
@@ -3123,11 +3136,11 @@ html {
   stroke: var(--fallback-bc,oklch(var(--bc)/1));
 }
 .group:hover .group-hover\:stroke-brand-primary {
-  stroke: #dd4343;
+  stroke: #B73D3D;
 }
 .group:hover .group-hover\:text-brand-primary {
   --tw-text-opacity: 1;
-  color: rgb(221 67 67 / var(--tw-text-opacity, 1));
+  color: rgb(183 61 61 / var(--tw-text-opacity, 1));
 }
 .group:focus .group-focus\:scale-110 {
   --tw-scale-x: 1.1;
@@ -3469,8 +3482,8 @@ html {
       </svg>
 
       <div class="text-center">
-        <h3 class="mt-1 text-lg font-semibold leading-5 text-gray-900">Computer Tune-Ups &amp; Enhancements</h3>
-        <p class="font-normal text-gray-700 text-md">Keep your computer up to date with the latest software and hardware improvements.</p>
+        <h3 class="mt-1 font-semibold leading-5 text-xlg text-primary-content">Computer Tune-Ups &amp; Enhancements</h3>
+        <p class="text-lg font-normal text-gray-700 text-primary-content">Keep your computer up to date with the latest software and hardware improvements.</p>
       </div>
     </a>
 
@@ -3480,8 +3493,8 @@ html {
       </svg>
 
       <div class="text-center">
-        <h3 class="mt-1 text-lg font-semibold leading-5 text-gray-900">Malware &amp; Virus Remediation</h3>
-        <p class="font-normal text-md">Fix issues with malware, viruses, and provide antivirus solutions to keep your system secure.</p>
+        <h3 class="mt-1 font-semibold leading-5 text-xlg text-primary-content">Malware &amp; Virus Remediation</h3>
+        <p class="text-lg font-normal text-primary-content">Fix issues with malware, viruses, and provide antivirus solutions to keep your system secure.</p>
       </div>
     </a>
 
@@ -3492,8 +3505,8 @@ html {
       </svg>
 
       <div class="text-center">
-        <h3 class="mt-1 text-lg font-semibold leading-5 text-gray-900">Home Automation &amp; Security Solutions</h3>
-        <p class="font-normal text-md">From home cameras to smart plugs and routines, optimize your home with power-saving smart technology.</p>
+        <h3 class="mt-1 font-semibold leading-5 text-xlg text-primary-content">Home Automation &amp; Security Solutions</h3>
+        <p class="text-lg font-normal text-primary-content">From home cameras to smart plugs and routines, optimize your home with power-saving smart technology.</p>
       </div>
     </a>
 
@@ -3503,8 +3516,8 @@ html {
       </svg>
 
       <div class="text-center">
-        <h3 class="mt-1 text-lg font-semibold leading-5 text-gray-900">Mobile Phone Updates &amp; Repairs</h3>
-        <p class="font-normal text-md">Software solutions for all phones, and expert iPhone repairs for screens, home buttons, batteries, and cameras.</p>
+        <h3 class="mt-1 font-semibold leading-5 text-xlg text-primary-content">Mobile Phone Updates &amp; Repairs</h3>
+        <p class="text-lg font-normal text-primary-content">Software solutions for all phones, and expert iPhone repairs for screens, home buttons, batteries, and cameras.</p>
       </div>
     </a>
 
@@ -3514,8 +3527,8 @@ html {
       </svg>
 
       <div class="text-center">
-        <h3 class="mt-1 text-lg font-semibold leading-5 text-gray-900">Game Console Troubleshooting</h3>
-        <p class="font-normal text-md">Diagnose and manage warranty repairs or handle repair processes for game consoles to get you back to gaming.</p>
+        <h3 class="mt-1 font-semibold leading-5 text-xlg text-primary-content">Game Console Troubleshooting</h3>
+        <p class="text-lg font-normal text-primary-content">Diagnose and manage warranty repairs or handle repair processes for game consoles to get you back to gaming.</p>
       </div>
     </a>
 
@@ -3525,8 +3538,8 @@ html {
       </svg>
 
       <div class="text-center">
-        <h3 class="mt-1 text-lg font-semibold leading-5 text-gray-900">Networking Solutions &amp; Optimization</h3>
-        <p class="font-normal text-md">Install and configure wireless and wired networks for optimal performance and connectivity.</p>
+        <h3 class="mt-1 font-semibold leading-5 text-xlg text-primary-content">Networking Solutions &amp; Optimization</h3>
+        <p class="text-lg font-normal text-primary-content">Install and configure wireless and wired networks for optimal performance and connectivity.</p>
       </div>
     </a>
 
@@ -3536,8 +3549,8 @@ html {
       </svg>
 
       <div class="text-center">
-        <h3 class="mt-1 text-lg font-semibold leading-5 text-gray-900">Web Design &amp; Development</h3>
-        <p class="font-normal text-md">Crafting intuitive and visually captivating web experiences through tailored design and expert development, ensuring your online presence stands out effortlessly with SEO-optimized solutions, modern design techniques, and a focus on accessibility.</p>
+        <h3 class="mt-1 font-semibold leading-5 text-xlg text-primary-content">Web Design &amp; Development</h3>
+        <p class="text-lg font-normal text-primary-content">Crafting intuitive and visually captivating web experiences through tailored design and expert development, ensuring your online presence stands out effortlessly with SEO-optimized solutions, modern design techniques, and a focus on accessibility.</p>
       </div>
     </a>
   </div>
@@ -3555,10 +3568,10 @@ html {
         </div>
         <div class="chat-header">
         Jayne Smith
-        <time class="text-xs opacity-50">12:45</time>
+        <time class="text-xs">12:45</time>
         </div>
         <div class="chat-bubble chat-bubble-secondary">Hello, AtomTech. I'm havin an issue with my computer, it's really going slow.</div>
-        <div class="opacity-50 chat-footer">Seen at 12:46</div>
+        <div class="chat-footer">Seen at 12:46</div>
       </div>
       <div class="chat chat-end">
         <div class="chat-image avatar">
@@ -3568,10 +3581,10 @@ html {
         </div>
         <div class="chat-header">
         AtomTech
-        <time class="text-xs opacity-50">12:46</time>
+        <time class="text-xs">12:46</time>
         </div>
         <div class="chat-bubble chat-bubble-primary">Thanks for reaching out! Would you prefer to drop it off, or should I swing by? Remember, it's just $35 if it's fixed in an hour!</div>
-        <div class="opacity-50 chat-footer">Seen at 12:46</div>
+        <div class="chat-footer">Seen at 12:46</div>
       </div>
       <div class="chat chat-start">
         <div class="chat-image avatar">
@@ -3581,10 +3594,10 @@ html {
         </div>
         <div class="chat-header">
         Jayne Smith
-        <time class="text-xs opacity-50">12:48</time>
+        <time class="text-xs">12:48</time>
         </div>
         <div class="chat-bubble chat-bubble-secondary">I'd prefer to drop it off.</div>
-        <div class="opacity-50 chat-footer">Seen at 12:48</div>
+        <div class="chat-footer">Seen at 12:48</div>
       </div>
       <div class="chat chat-end">
         <div class="chat-image avatar">
@@ -3594,10 +3607,10 @@ html {
         </div>
         <div class="chat-header">
         AtomTech
-        <time class="text-xs opacity-50">12:48</time>
+        <time class="text-xs">12:48</time>
         </div>
         <div class="chat-bubble chat-bubble-primary">Let's get a time slot scheduled!</div>
-        <div class="opacity-50 chat-footer">Seen at 12:48</div>
+        <div class="chat-footer">Seen at 12:48</div>
       </div>
     </div>
     <div class="w-4/5 ml-2 -mt-2 shadow-xl ms:-mt-12 md:w-1/2 md:ml-8 card bg-brand-primary drop-shadow-xl">
@@ -3614,8 +3627,8 @@ html {
       <h2 class="mt-0 mb-4 text-4xl font-bold md:text-5xl text-neutral-content font-jakarta">Schedule an Appointment!</h2>
       <p class="pt-0 pb-6 m-0 text-lg text-neutral-content">Appointments are priced at only $35 for the first hour, whether I come to your home or you drop off your device. If your issue is resolved within this time frame, that's all you pay.</p>
       <a href="/contact/" class="text-xl no-underline border-0 btn btn-primary bg-base-content text-neutral-content hover:text-brand-primary hover:bg-neutral-content focus:bg-base-content focus:text-neutral-content">Schedule Now</a>
-      <p class="absolute m-0 text-xs text-base-200 bottom-2 right-2">
-        * <a href="/services-terms/" class="font-light text-neutral-content hover:no-underline focus:no-underline hover:text-neutral-content focus:text-neutral-content">Terms and conditions apply</a>.</p>
+      <p class="absolute m-0 text-xs -bottom-4 right-2">
+        * <a href="/services-terms/" class="font-light text-primary-content hover:no-underline focus:no-underline hover:text-primary-content focus:text-primary-content">Terms and conditions apply</a>.</p>
     </div>
   </div>
 </section>
