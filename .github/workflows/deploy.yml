@@ -22,10 +22,11 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /home/atomtrox/helloatomtech/
+          server-dir: /helloatomtech/
           protocol: ftp
           port: 21 # Update with your FTPS port if different
           dry-run: true
+          dangerous-clean-slate: true
 
   deploy-staging:
     name: 🎉 Deploy to staging
@@ -46,3 +47,4 @@ jobs:
           protocol: ftp
           port: 21 # Update with your FTPS port if different
           dry-run: true
+          dangerous-clean-slate: true
