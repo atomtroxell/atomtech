@@ -18,7 +18,7 @@ jobs:
       - name: Deploy to main
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftp.atomtroxell.com
+          server: 192.155.110.18
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
@@ -38,7 +38,7 @@ jobs:
       - name: Deploy to staging
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftp.atomtroxell.com
+          server: 192.155.110.18
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
