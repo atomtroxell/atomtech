@@ -21,8 +21,9 @@ jobs:
           server: ftp.atomtroxell.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist
-          remote-dir: /home/atomtrox/helloatomtech
+          dry-run: true
+          local-dir: ./dist # Adjust to your 11ty build directory
+          remote-dir: /home/atomtrox/helloatomtech # Remote directory for main branch
 
   deploy-staging:
     name: 🎉 Deploy to staging
@@ -38,5 +39,6 @@ jobs:
           server: ftp.atomtroxell.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist
-          remote-dir: /home/atomtrox/staging.helloatomtech.com
+          dry-run: true
+          local-dir: ./dist # Adjust to your 11ty build directory
+          remote-dir: /home/atomtrox/staging.helloatomtech.com # Remote directory for staging branch
