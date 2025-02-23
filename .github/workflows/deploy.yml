@@ -1,15 +1,37 @@
 on:
   push:
     branches:
+      - main
       - staging
 
 name: 🚀 Deploy website on push
 
 jobs:
+  # Build project
+  build:
+    name: 🛠️ Build project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+  # Deploy to staging
   deploy-staging:
     name: 🎉 Deploy to staging
     if: github.ref == 'refs/heads/staging'
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -20,7 +42,28 @@ jobs:
           server: 192.155.110.18
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: /staging.helloatomtech.com/
+          local-dir: ./dist
+          server-dir: /staging.helloatomtech.com
           protocol: ftp
-          port: 21 # Update with your FTPS port if different
+          port: 21 # Update with your FTP port if different
+
+  # Deploy to main
+  deploy-main:
+    name: 🎉 Deploy to main
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to main
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 192.155.110.18
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist
+          server-dir: /helloatomtech.com
+          protocol: ftp
+          port: 21 # Update with your FTP port if different
