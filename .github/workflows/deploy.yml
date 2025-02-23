@@ -24,5 +24,4 @@ jobs:
           server-dir: /home/atomtrox/staging.helloatomtech.com/
           protocol: ftp
           port: 21 # Update with your FTPS port if different
-          dry-run: true
           dangerous-clean-slate: true
