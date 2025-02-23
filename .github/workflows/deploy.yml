@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /home/atomtrox/helloatomtech/
-          protocol: ftps
+          protocol: ftp
           port: 21 # Update with your FTPS port if different
           dry-run: true
 
@@ -43,6 +43,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /home/atomtrox/staging.helloatomtech.com/
-          protocol: ftps
+          protocol: ftp
           port: 21 # Update with your FTPS port if different
           dry-run: true
