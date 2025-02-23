@@ -1,35 +1,42 @@
-name: Deploy to Shared Hosting
-
 on:
   push:
     branches:
       - main
+      - staging
+
+name: 🚀 Deploy website on push
 
 jobs:
-  deploy:
+  deploy-main:
+    name: 🎉 Deploy to main
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v2
+      - name: 📂 Sync files to main
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          node-version: "14"
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build 11ty Site
-        run: npx @11ty/eleventy
-
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
-        with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ftp.atomtroxell.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist
-          remote-dir: /home/atomtrox/helloatomtech.com/helloatomtech
-          exclude: ".git,.github"
+          local-dir: ./dist # Adjust to your 11ty build directory
+          remote-dir: /home/atomtrox/staging.helloatomtech.com # Remote directory for main branch
+
+  deploy-staging:
+    name: 🎉 Deploy to staging
+    if: github.ref == 'refs/heads/staging'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: 📂 Sync files to staging
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftp.atomtroxell.com
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist # Adjust to your 11ty build directory
+          remote-dir: /home/atomtrox/helloatomtech.com/staging # Remote directory for staging branch
