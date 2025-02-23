@@ -1,33 +1,11 @@
 on:
   push:
     branches:
-      - main
       - staging
 
 name: 🚀 Deploy website on push
 
 jobs:
-  deploy-main:
-    name: 🎉 Deploy to main
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Deploy to main
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: 192.155.110.18
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: /helloatomtech/
-          protocol: ftp
-          port: 21 # Update with your FTPS port if different
-          dry-run: true
-          dangerous-clean-slate: true
-
   deploy-staging:
     name: 🎉 Deploy to staging
     if: github.ref == 'refs/heads/staging'
